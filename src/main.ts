@@ -1,6 +1,7 @@
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { age, name, isDeveloper } from './basics/01-types';
+import { pokemonIds } from './basics/02-objects';
 import './style.css';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -16,6 +17,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Name from variable: ${name}<br />
       Age from variable: ${age}<br />
       Is developer from variable: ${isDeveloper}<br />
+    </div>
+    <div>
+    PokemonIds: ${pokemonIds.join(' ')}
     </div>
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
