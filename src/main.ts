@@ -1,7 +1,7 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import typescriptLogo from './typescript.svg';
+import viteLogo from '/vite.svg';
+import { age, name, isDeveloper } from './basics/01-types';
+import './style.css';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -13,12 +13,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </a>
     <h1>Vite + TypeScript</h1>
     <div class="card">
-      <button id="counter" type="button"></button>
+      Name from variable: ${name}<br />
+      Age from variable: ${age}<br />
+      Is developer from variable: ${isDeveloper}<br />
     </div>
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+`;
