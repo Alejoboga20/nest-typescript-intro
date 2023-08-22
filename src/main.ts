@@ -2,6 +2,7 @@ import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { age, name, isDeveloper } from './basics/01-types';
 import { pokemonIds } from './basics/02-objects';
+import { charmander } from './basics/03-classes';
 import './style.css';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -20,6 +21,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     <div>
     PokemonIds: ${pokemonIds.join(' ')}
+    </div>
+    <div>
+    ${JSON.stringify(charmander, null, 2)}
     </div>
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
