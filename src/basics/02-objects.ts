@@ -15,4 +15,17 @@ export const bulbasaur: Pokemon = {
 	name: 'Bulbasaur',
 };
 
-console.log({ bulbasaur });
+export const pokemons: Pokemon[] = [
+	{
+		id: 1,
+		name: 'Bulbasaur',
+	},
+	{
+		id: 2,
+		name: 'Charmander',
+	},
+	{
+		id: 3,
+		name: 'Squirtle',
+	},
+];
