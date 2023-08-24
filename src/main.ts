@@ -2,7 +2,8 @@ import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { age, name, isDeveloper } from './basics/01-types';
 import { pokemonIds } from './basics/02-objects';
-import { charmander } from './basics/03-classes';
+//import { charmander } from './basics/03-classes';
+import { charmander } from './basics/04-injection';
 import './style.css';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
