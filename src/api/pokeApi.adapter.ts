@@ -1,16 +1,22 @@
 import axios from 'axios';
 
-export class PokeApiAdapter {
-	private readonly axios = axios;
+export interface HttpAdapter {
+	get<T>(url: string): Promise<T>;
+}
 
-	async get(url: string) {
-		const { data } = await this.axios.get(url);
+export class PokeApiFetchAdapter implements HttpAdapter {
+	async get<T>(url: string) {
+		const response = await fetch(url);
+		const data: T = await response.json();
 		return data;
 	}
+}
 
-	async post(url: string, data: any) {}
+export class PokeApiAdapter implements HttpAdapter {
+	private readonly axios = axios;
 
-	async patch(url: string, data: any) {}
-
-	async delete(url: string) {}
+	async get<T>(url: string) {
+		const { data } = await this.axios.get<T>(url);
+		return data;
+	}
 }
